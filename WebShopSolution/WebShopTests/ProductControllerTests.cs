@@ -1,8 +1,8 @@
+using Dataccess.Repositories.Products;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using WebShop;
 using WebShop.Controllers;
-using WebShop.Repositories;
 
 public class ProductControllerTests
 {

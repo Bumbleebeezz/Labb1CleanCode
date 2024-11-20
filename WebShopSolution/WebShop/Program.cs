@@ -1,5 +1,4 @@
 using WebShop.Notifications;
-using WebShop.Repositories;
 using WebShop.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);

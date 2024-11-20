@@ -1,5 +1,5 @@
-﻿using WebShop.Notifications;
-using WebShop.Repositories;
+﻿using Dataccess.Repositories.Products;
+using WebShop.Notifications;
 
 namespace WebShop.UnitOfWork
 {
