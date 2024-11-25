@@ -17,22 +17,36 @@ public class ProductControllerTests
     }
 
     [Fact]
-    public void GetProducts_ReturnsOkResult_WithAListOfProducts()
+    public async void GetProducts_ReturnsOkResult_WithAListOfProducts()
     {
         // Arrange
+        var mockController = new ProductController();
 
         // Act
+        var result =  _controller.GetProducts();
 
         // Assert
+        var respons = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(result,respons);
     }
 
     [Fact]
     public void AddProduct_ReturnsOkResult()
     {
         // Arrange
+        var mockController = new ProductController();
+
+        var addProduct = new Product
+        {
+            Id = 1,
+            Name = "Add test product"
+        };
 
         // Act
+        var result = _controller.AddProduct(addProduct);
 
         // Assert
+        var okResult = Assert.IsType<OkResult>(result);
+        Assert.NotNull(okResult); // Ensure the result is not null
     }
 }
