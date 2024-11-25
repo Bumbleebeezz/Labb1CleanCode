@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace WebShopTests.Payment
 {
-    public class PaymentProcessTests
+    public class CreditCardPaymentProcessTests
     {
         [Fact]
         public void CreditCardPayment_ShouldReturnSuccessMessage()
