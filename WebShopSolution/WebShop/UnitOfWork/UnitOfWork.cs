@@ -3,7 +3,7 @@ using WebShop.Notifications;
 
 namespace WebShop.UnitOfWork
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UoW : IUnitOfWork
     {
         // Hämta produkter från repository
         public IProductRepository Products { get; private set; }
@@ -11,7 +11,7 @@ namespace WebShop.UnitOfWork
         private readonly ProductSubject _productSubject;
 
         // Konstruktor används för tillfället av Observer pattern
-        public UnitOfWork(ProductSubject productSubject = null)
+        public UoW(ProductSubject productSubject = null)
         {
             Products = null;
 

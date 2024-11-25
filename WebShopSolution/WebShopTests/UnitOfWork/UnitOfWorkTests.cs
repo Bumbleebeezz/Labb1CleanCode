@@ -1,6 +1,7 @@
 using Moq;
 using WebShop;
 using WebShop.Notifications;
+using WebShop.UnitOfWork;
 
 namespace WebShopTests.UnitOfWork
 {
@@ -20,7 +21,7 @@ namespace WebShopTests.UnitOfWork
             productSubject.Attach(mockObserver.Object);
 
             // Injicerar vårt eget ProductSubject i UnitOfWork
-            var unitOfWork = new UnitOfWork(productSubject);
+            var unitOfWork = new UoW(productSubject);
 
             // Act
             unitOfWork.NotifyProductAdded(product);
