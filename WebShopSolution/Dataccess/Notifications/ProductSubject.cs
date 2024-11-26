@@ -1,4 +1,11 @@
-﻿namespace WebShop.Notifications
+﻿using Dataccess.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Dataccess.Notifications
 {
     // Subject som håller reda på observatörer och notifierar dem
     public class ProductSubject

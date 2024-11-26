@@ -1,5 +1,7 @@
-using WebShop.Notifications;
-using WebShop.UnitOfWork;
+
+
+using Dataccess.Notifications;
+using Dataccess.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 

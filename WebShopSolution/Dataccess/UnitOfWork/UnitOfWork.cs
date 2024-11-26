@@ -1,7 +1,13 @@
-﻿using Dataccess.Repositories.Products;
-using WebShop.Notifications;
+﻿using Dataccess.Entities;
+using Dataccess.Notifications;
+using Dataccess.Repositories.Products;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace WebShop.UnitOfWork
+namespace Dataccess.UnitOfWork
 {
     public class UoW : IUnitOfWork
     {

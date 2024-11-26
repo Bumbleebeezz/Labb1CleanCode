@@ -1,8 +1,15 @@
-﻿namespace WebShop.Notifications
+﻿using Dataccess.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Dataccess.Notifications
 {
-    // En konkret observatör som skickar e-postmeddelanden
     public class EmailNotification : INotificationObserver
     {
+        // En konkret observatör som skickar e-postmeddelanden
         public void Update(Product product)
         {
             // Här skulle du implementera logik för att skicka ett e-postmeddelande
