@@ -1,11 +1,11 @@
-﻿using Dataccess.Strategies.Payment.CreditCard;
-using Dataccess.Strategies.Payment;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dataccess.Strategies.Payment.Swish;
+using WebShop.Strategies.Payment;
+using WebShop.Strategies.Payment.Swish;
 
 namespace WebShopTests.Payment
 {

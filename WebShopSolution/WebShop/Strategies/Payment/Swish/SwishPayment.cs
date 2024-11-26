@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dataccess.Strategies.Payment.CreditCard
+namespace WebShop.Strategies.Payment.Swish
 {
-    public class CreditCardPayment : IPaymentStrategy
+    public class SwishPayment : IPaymentStrategy
     {
         public string ProcessPayment(double amount)
         {
-            return $"Credit card payment of {amount} processed.";
+            return $"Swish payment of {amount} processed.";
         }
     }
 }

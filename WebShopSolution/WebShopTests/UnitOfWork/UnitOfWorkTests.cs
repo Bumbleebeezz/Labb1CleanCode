@@ -1,8 +1,8 @@
 using Dataccess.Entities;
-using Dataccess.Notifications;
-using Dataccess.UnitOfWork;
 using Moq;
 using WebShop;
+using WebShop.Notifications;
+using WebShop.UnitOfWork;
 
 namespace WebShopTests.UnitOfWork
 {

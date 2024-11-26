@@ -1,11 +1,12 @@
-﻿using Dataccess.Strategies.Payment;
-using Dataccess.Strategies.Payment.CreditCard;
+﻿
 using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebShop.Strategies.Payment;
+using WebShop.Strategies.Payment.CreditCard;
 
 namespace WebShopTests.Payment
 {

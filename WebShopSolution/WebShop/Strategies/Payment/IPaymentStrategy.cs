@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dataccess.Strategies.Payment
+namespace WebShop.Strategies.Payment
 {
     public interface IPaymentStrategy
     {
