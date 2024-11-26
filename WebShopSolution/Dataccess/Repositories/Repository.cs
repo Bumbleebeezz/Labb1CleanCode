@@ -21,26 +21,38 @@ namespace Dataccess.Repositories
         public void Add(T item)
         {
             _dbSet.Add(item);
+            _context.SaveChanges();
         }
 
         public T Get(int id)
         {
-            throw new NotImplementedException();
+            return _dbSet.Find(id); // Assumes that T is an entity with a primary key of type int
         }
 
         public IEnumerable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbSet.ToList(); // Returns all entities of type T as a list
         }
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            var entity = _dbSet.Find(id);
+            if (entity != null)
+            {
+                _dbSet.Remove(entity);
+                _context.SaveChanges();
+            }
         }
 
         public void Update(T item)
         {
-            throw new NotImplementedException();
+            if (item == null)
+            {
+                throw new ArgumentNullException(nameof(item), "Item cannot be null.");
+            }
+
+            _dbSet.Update(item);
+            _context.SaveChanges();
         }
     }
 }
