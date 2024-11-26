@@ -1,3 +1,4 @@
+using Dataccess.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebShop.Controllers

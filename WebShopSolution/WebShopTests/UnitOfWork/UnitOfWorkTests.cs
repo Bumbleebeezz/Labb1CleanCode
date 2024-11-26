@@ -1,3 +1,4 @@
+using Dataccess.Entities;
 using Dataccess.Notifications;
 using Dataccess.UnitOfWork;
 using Moq;
