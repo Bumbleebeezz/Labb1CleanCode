@@ -16,10 +16,9 @@ namespace WebShopTests.Payment
         {
             // Arrange
             var swishPayment = new SwishPayment();
-            var paymentProcessor = new PaymentProcessor(swishPayment);
 
             // Act
-            var result = paymentProcessor.ProcessPayment(100.0);
+            var result = swishPayment.ProcessPayment(100.0);
 
             // Assert
             Assert.Equal("Swish payment of 100 processed.", result);

@@ -17,10 +17,9 @@ namespace WebShopTests.Payment
         {
             // Arrange
             var creditCardPayment = new CreditCardPayment();
-            var paymentProcessor = new PaymentProcessor(creditCardPayment);
 
             // Act
-            var result = paymentProcessor.ProcessPayment(100.0);
+            var result = creditCardPayment.ProcessPayment(100.0);
 
             // Assert
             Assert.Equal("Credit card payment of 100 processed.", result);

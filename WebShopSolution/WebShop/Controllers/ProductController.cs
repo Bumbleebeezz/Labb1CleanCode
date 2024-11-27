@@ -1,5 +1,6 @@
 using Dataccess.Entities;
 using Microsoft.AspNetCore.Mvc;
+using WebShop.UnitOfWork;
 
 namespace WebShop.Controllers
 {
@@ -7,6 +8,8 @@ namespace WebShop.Controllers
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
+        private readonly UoW _unitOfWork;
+
         public ProductController()
         {
         }
@@ -15,6 +18,13 @@ namespace WebShop.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> GetProducts()
         {
+            // Fetch products using repository pattern via Unit of Work
+            var products = _unitOfWork.ProductRepository.GetAll();
+
+            if (products == null || !products.Any())
+            {
+                return NoContent(); // Return 204 if no products found
+            }
             // Behöver använda repository via Unit of Work för att hämta produkter
             return Ok();
         }

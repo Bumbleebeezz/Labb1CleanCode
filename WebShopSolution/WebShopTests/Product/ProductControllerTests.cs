@@ -1,5 +1,6 @@
 using Dataccess.Entities;
 using Dataccess.Repositories.Products;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using WebShop;
@@ -21,14 +22,15 @@ public class ProductControllerTests
     public async void GetProducts_ReturnsOkResult_WithAListOfProducts()
     {
         // Arrange
-        var mockController = new ProductController();
+        var controller = new ProductController();
 
         // Act
-        var result =  _controller.GetProducts();
+        var result = controller.GetProducts();
 
         // Assert
-        var respons = Assert.IsType<OkObjectResult>(result);
-        Assert.Equal(result,respons);
+        Assert.NotNull(result);
+        var products = Assert.IsType<List<Product>>(result.Value); // Ensure the value is a list of Product
+        Assert.NotEmpty(products);  // Ensure the list is not empty
     }
 
     [Fact]
@@ -44,7 +46,7 @@ public class ProductControllerTests
         };
 
         // Act
-        var result = _controller.AddProduct(addProduct);
+        var result = mockController.AddProduct(addProduct);
 
         // Assert
         var okResult = Assert.IsType<OkResult>(result);
