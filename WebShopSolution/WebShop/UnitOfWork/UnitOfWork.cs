@@ -1,4 +1,6 @@
 ﻿using Dataccess.Entities;
+using Dataccess.Repositories.Customers;
+using Dataccess.Repositories.Orders;
 using Dataccess.Repositories.Products;
 using WebShop.Notifications;
 
@@ -8,6 +10,8 @@ namespace WebShop.UnitOfWork
     {
         // Hämta produkter från repository
         public IProductRepository Products { get; private set; }
+        public ICustomerRepository Customers { get; private set; }
+        public IOrderRepository Orders { get; private set; }
 
         private readonly ProductSubject _productSubject;
 
@@ -15,6 +19,8 @@ namespace WebShop.UnitOfWork
         public UoW(ProductSubject productSubject = null)
         {
             Products = null;
+            Customers = null;
+            Orders = null;
 
             // Om inget ProductSubject injiceras, skapa ett nytt
             _productSubject = productSubject ?? new ProductSubject();
@@ -26,6 +32,11 @@ namespace WebShop.UnitOfWork
         public void NotifyProductAdded(Product product)
         {
             _productSubject.Notify(product);
+        }
+
+        internal object GetAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }

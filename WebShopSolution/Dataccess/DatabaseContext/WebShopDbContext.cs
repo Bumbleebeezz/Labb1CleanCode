@@ -23,7 +23,10 @@ namespace Dataccess.DatabaseContext
             optionsBuilder.UseSqlServer("Data Source=MARIACONFIG;Integrated Security=True;Initial Catalog=WebShopDb;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
         public DbSet<Product> Products { get; set; }
-        //public DbSet<Order> Orders { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
+
+
         //public DbSet<Category> Categories { get; set; }
         //public DbSet<OrderItem> OrderItems { get; set; }
 
