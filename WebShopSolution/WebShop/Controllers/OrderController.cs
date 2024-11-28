@@ -46,13 +46,39 @@ namespace WebShop.Controllers
 
             var newOrder = new Order { Id = 1, CustomerId = 1, Products = {5} };
 
-
-
             // Sparar förändringar
 
             // Notifierar observatörer om att en ny order lagts till
 
             return Ok("Order added successfully."); // Return 200 with a message
+        }
+
+        // Endpoint för att updatera en order
+        [HttpPut]
+        public ActionResult UpdateOrder(int id)
+        {
+            if (id == null)
+            {
+                return BadRequest("Order cannot be null."); // Return 400 if input is null
+            }
+            // Updatera produkten via repository
+
+            // Sparar förändringar
+
+            // Notifierar observatörer om att produkten är uppdaterad
+
+            return Ok("Order updated."); // Return 200 with a message
+        }
+
+        // Endpoint för att ta bort en order
+        [HttpDelete]
+        public ActionResult RemoveOrder(int id)
+        {
+            if (id == null)
+            {
+                return BadRequest("Order id cannot be null."); // Return 400 if input is null
+            }
+            return Ok("Order removed successfully."); // Return 200 with a message
         }
     }
 }

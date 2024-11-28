@@ -51,5 +51,33 @@ namespace WebShop.Controllers
 
             return Ok("Customer added successfully."); // Return 200 with a message
         }
+
+        // Endpoint för att updatera en customer
+        [HttpPut]
+        public ActionResult UpdateCustomer(int id)
+        {
+            if (id == null)
+            {
+                return BadRequest("Customer cannot be null."); // Return 400 if input is null
+            }
+            // Updatera produkten via repository
+
+            // Sparar förändringar
+
+            // Notifierar observatörer om att produkten är uppdaterad
+
+            return Ok("Customer updated."); // Return 200 with a message
+        }
+
+        // Endpoint för att ta bort en customer
+        [HttpDelete]
+        public ActionResult RemoveCustomer(int id)
+        {
+            if (id == null)
+            {
+                return BadRequest("Customer id cannot be null."); // Return 400 if input is null
+            }
+            return Ok("Customer removed successfully."); // Return 200 with a message
+        }
     }
 }
