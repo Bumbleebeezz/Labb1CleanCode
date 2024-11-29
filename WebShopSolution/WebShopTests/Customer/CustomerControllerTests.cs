@@ -1,5 +1,6 @@
 ﻿using Dataccess.Repositories.Customers;
 using Dataccess.Repositories.Products;
+using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,15 @@ namespace WebShopTests.Customer
         public async void GetCustomers_ReturnsOkResult_WithAListOfCustomers()
         {
             // Arrange
+            var controller = new CustomerController();
 
             // Act
+            var result = controller.GetCustomers;
 
             // Assert
+            Assert.NotNull(result); // Ensure the result is not null
+            // var okResult = Assert.IsType<OkObjectResult>(result); // Check if the result is an OkObjectResult
+            // Assert.NotNull(okResult.Value); // Ensure the Value is not null
         }
     }
 }
