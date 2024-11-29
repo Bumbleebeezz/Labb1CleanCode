@@ -11,6 +11,10 @@ builder.Services.AddControllers();
 // Registrera Unit of Work i DI-container
 builder.Services.AddScoped<IUnitOfWork, UoW>();
 builder.Services.AddTransient<INotificationObserver, EmailNotification>();
+builder.Services.AddScoped<ProductSubject>();
+builder.Services.AddScoped<CustomerSubject>();
+builder.Services.AddScoped<OrderSubject>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
