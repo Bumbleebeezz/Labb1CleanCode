@@ -21,7 +21,7 @@ namespace WebShop.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> GetProducts()
         {
-            var products = new List<Product> { new Product { Name = "Sample" } }; // Example
+            var products = new List<Product> { new() { Name = "Sample" } }; // Example
             return Ok(products);
             //// Fetch products using repository pattern via Unit of Work
             //var products = _unitOfWork.GetAll();
@@ -51,6 +51,7 @@ namespace WebShop.Controllers
             
 
             // Sparar förändringar
+            
 
             // Notifierar observatörer om att en ny produkt har lagts till
 
