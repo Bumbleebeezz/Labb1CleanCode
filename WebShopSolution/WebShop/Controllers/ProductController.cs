@@ -59,6 +59,8 @@ namespace WebShop.Controllers
 
         // Endpoint för att updatera en produkt
         [HttpPut]
+        [Route("id")]
+
         public ActionResult UpdateProduct(int id)
         {
             if (id == null)

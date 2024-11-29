@@ -11,5 +11,15 @@ namespace WebShop.Notifications
             // För enkelhetens skull skriver vi ut till konsolen
             Console.WriteLine($"Email Notification: New product added - {product.Name}");
         }
+
+        public void Update(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Order order)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
