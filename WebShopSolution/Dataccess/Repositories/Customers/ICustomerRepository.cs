@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dataccess.Repositories.Customers
 {
-    public interface ICustomerRepository : IRepository<Order>
+    public interface ICustomerRepository : IRepository<Customer>
     {
     }
 }

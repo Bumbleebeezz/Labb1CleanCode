@@ -16,22 +16,22 @@ namespace Dataccess.Repositories.Customers
         {
         }
 
-        public void Add(Order item)
+        public void Add(Customer item)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Order item)
+        public void Update(Customer item)
         {
             throw new NotImplementedException();
         }
 
-        Order IRepository<Order>.Get(int id)
+        Customer IRepository<Customer>.Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        IEnumerable<Order> IRepository<Order>.GetAll()
+        IEnumerable<Customer> IRepository<Customer>.GetAll()
         {
             throw new NotImplementedException();
         }
