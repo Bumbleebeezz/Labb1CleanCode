@@ -21,15 +21,17 @@ namespace WebShop.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> GetProducts()
         {
-            // Fetch products using repository pattern via Unit of Work
-            var products = _unitOfWork.GetAll();
+            var products = new List<Product> { new Product { Name = "Sample" } }; // Example
+            return Ok(products);
+            //// Fetch products using repository pattern via Unit of Work
+            //var products = _unitOfWork.GetAll();
 
-            if (products is null)
-            {
-                return NoContent(); // Return 204 if no products found
-            }
-            // Behöver använda repository via Unit of Work för att hämta produkter
-            return Ok();
+            //if (products is null)
+            //{
+            //    return NoContent(); // Return 204 if no products found
+            //}
+            //// Behöver använda repository via Unit of Work för att hämta produkter
+            //return Ok();
         }
 
         // Endpoint för att lägga till en ny produkt
