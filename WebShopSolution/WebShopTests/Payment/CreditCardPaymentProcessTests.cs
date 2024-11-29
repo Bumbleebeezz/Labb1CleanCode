@@ -1,12 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Routing;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebShop.Strategies.Payment;
-using WebShop.Strategies.Payment.CreditCard;
+﻿using WebShop.Strategies.Payment.CreditCard;
 
 namespace WebShopTests.Payment
 {

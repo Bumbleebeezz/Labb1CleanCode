@@ -1,7 +1,5 @@
-﻿using Castle.Core.Resource;
-using Dataccess.Entities;
+﻿using Dataccess.Entities;
 using Dataccess.Repositories.Customers;
-using Dataccess.Repositories.Products;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using WebShop.UnitOfWork;

@@ -1,6 +1,5 @@
 using Dataccess.Entities;
 using Moq;
-using WebShop;
 using WebShop.Notifications;
 using WebShop.UnitOfWork;
 

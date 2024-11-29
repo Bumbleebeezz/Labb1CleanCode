@@ -1,11 +1,5 @@
 ﻿using Dataccess.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dataccess.DatabaseContext
 {
@@ -17,10 +11,7 @@ namespace Dataccess.DatabaseContext
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Initial Catalog=WebShopDb;
-            // localhost server
-            // optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WebShopDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
-            optionsBuilder.UseSqlServer("Data Source=MARIACONFIG;Integrated Security=True;Initial Catalog=WebShopDb;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WebShopDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Customer> Customers { get; set; }

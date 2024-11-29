@@ -1,9 +1,6 @@
 using Dataccess.Entities;
 using Dataccess.Repositories.Products;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Moq;
-using WebShop;
 using WebShop.Controllers;
 
 public class ProductControllerTests

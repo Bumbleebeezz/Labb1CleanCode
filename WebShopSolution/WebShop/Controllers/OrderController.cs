@@ -1,6 +1,5 @@
 ﻿using Dataccess.Entities;
 using Dataccess.Repositories.Orders;
-using Dataccess.Repositories.Products;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using WebShop.UnitOfWork;

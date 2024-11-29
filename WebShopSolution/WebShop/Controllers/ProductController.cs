@@ -2,7 +2,6 @@ using Dataccess.Entities;
 using Dataccess.Repositories.Products;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using WebShop.Notifications;
 using WebShop.UnitOfWork;
 
 namespace WebShop.Controllers
