@@ -9,7 +9,6 @@
         public bool Discontinued { get; set; }
 
         //public int CategoryId { get; set; }
-        //// Example of navigation property
         //public Category Category { get; set; }
     }
 }
