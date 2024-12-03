@@ -20,8 +20,6 @@ namespace WebShopTests.Customer
 
             // Assert
             Assert.NotNull(result); // Ensure the result is not null
-            // var okResult = Assert.IsType<OkObjectResult>(result); // Check if the result is an OkObjectResult
-            // Assert.NotNull(okResult.Value); // Ensure the Value is not null
         }
     }
 }

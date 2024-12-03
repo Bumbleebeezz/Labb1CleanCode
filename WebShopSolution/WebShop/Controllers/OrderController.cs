@@ -27,7 +27,7 @@ namespace WebShop.Controllers
             {
                 return NoContent(); // Return 204 if no orders found
             }
-            // Behöver använda repository via Unit of Work för att hämta orders
+            
             return Ok();
         }
 
@@ -45,10 +45,7 @@ namespace WebShop.Controllers
 
             var newOrder = new Order { Id = 1, CustomerId = 1, Products = {5} };
 
-            // Sparar förändringar
-
             // Notifierar observatörer om att en ny order lagts till
-
             return Ok("Order added successfully."); // Return 200 with a message
         }
 
@@ -60,12 +57,7 @@ namespace WebShop.Controllers
             {
                 return BadRequest("Order cannot be null."); // Return 400 if input is null
             }
-            // Updatera produkten via repository
-
-            // Sparar förändringar
-
             // Notifierar observatörer om att produkten är uppdaterad
-
             return Ok("Order updated."); // Return 200 with a message
         }
 

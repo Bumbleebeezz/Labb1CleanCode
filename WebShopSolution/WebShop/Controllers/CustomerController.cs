@@ -1,7 +1,6 @@
 ﻿using Dataccess.Entities;
 using Dataccess.Repositories.Customers;
 using Microsoft.AspNetCore.Mvc;
-using Moq;
 using WebShop.UnitOfWork;
 
 namespace WebShop.Controllers
@@ -25,8 +24,8 @@ namespace WebShop.Controllers
             {
                 return NoContent(); // Return 204 if no customers found
             }
-            // Behöver använda repository via Unit of Work för att hämta customers
-            return Ok();
+            // Return customers
+            return Ok(customers);
         }
 
         // Endpoint för att lägga till en ny customer
@@ -37,16 +36,10 @@ namespace WebShop.Controllers
             {
                 return BadRequest("Customert cannot be null."); // Return 400 if input is null
             }
-            // Lägger till produkten via repository
-            var mockRepo = new Mock<ICustomerRepository>();
-            var mockUnitOfWork = new Mock<IUnitOfWork>();
-
+            // Lägger till customer via repository
             var newCustomer = new Customer { Id = 1, FirstName = "Jack", LastName = "Smith", Email = "jack.smith@gmail.com"};
 
-            // Sparar förändringar
-
             // Notifierar observatörer om att en ny produkt har lagts till
-
             return Ok("Customer added successfully."); // Return 200 with a message
         }
 
@@ -58,12 +51,7 @@ namespace WebShop.Controllers
             {
                 return BadRequest("Customer cannot be null."); // Return 400 if input is null
             }
-            // Updatera produkten via repository
-
-            // Sparar förändringar
-
             // Notifierar observatörer om att produkten är uppdaterad
-
             return Ok("Customer updated."); // Return 200 with a message
         }
 

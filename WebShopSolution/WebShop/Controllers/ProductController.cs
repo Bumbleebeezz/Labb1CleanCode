@@ -1,7 +1,6 @@
 using Dataccess.Entities;
 using Dataccess.Repositories.Products;
 using Microsoft.AspNetCore.Mvc;
-using Moq;
 using WebShop.UnitOfWork;
 
 namespace WebShop.Controllers
@@ -20,17 +19,13 @@ namespace WebShop.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> GetProducts()
         {
-            var products = new List<Product> { new() { Name = "Sample" } }; // Example
-            return Ok(products);
-            //// Fetch products using repository pattern via Unit of Work
-            //var products = _unitOfWork.GetAll();
-
-            //if (products is null)
-            //{
-            //    return NoContent(); // Return 204 if no products found
-            //}
-            //// Behöver använda repository via Unit of Work för att hämta produkter
-            //return Ok();
+            // Fetch products using repository pattern via Unit of Work
+            var products = _unitOfWork.GetAll();
+            if (products is null)
+            {
+                return NoContent(); // Return 204 if no products found
+            }
+            return Ok();
         }
 
         // Endpoint för att lägga till en ny produkt
@@ -42,18 +37,10 @@ namespace WebShop.Controllers
                 return BadRequest("Product cannot be null."); // Return 400 if input is null
             }
             // Lägger till produkten via repository
-            var mockRepo = new Mock<IProductRepository>();
-            var mockUnitOfWork = new Mock<IUnitOfWork>();
 
             var newProduct = new Product { Id = 1, Name = "New Product" };
 
-            
-
-            // Sparar förändringar
-            
-
             // Notifierar observatörer om att en ny produkt har lagts till
-
             return Ok("Product added successfully."); // Return 200 with a message
         }
 
@@ -67,12 +54,7 @@ namespace WebShop.Controllers
             {
                 return BadRequest("Product cannot be null."); // Return 400 if input is null
             }
-            // Updatera produkten via repository
-
-            // Sparar förändringar
-
             // Notifierar observatörer om att produkten är uppdaterad
-
             return Ok("Product updated."); // Return 200 with a message
         }
 

@@ -10,9 +10,8 @@ public class ProductControllerTests
 
     public ProductControllerTests()
     {
-        _mockProductRepository = new Mock<IProductRepository>();
-
         // Ställ in mock av Products-egenskapen
+        _mockProductRepository = new Mock<IProductRepository>();
     }
 
     [Fact]
@@ -26,12 +25,6 @@ public class ProductControllerTests
 
         // Assert
         Assert.NotNull(result);
-
-        //var okResult = Assert.IsType<OkObjectResult>(result);
-        //Assert.NotNull(okResult.Value);  // Ensure the Value is not null
-
-        //var products = Assert.IsType<List<Product>>(okResult.Value);
-        //Assert.NotEmpty(products);
     }
 
     [Fact]
@@ -50,7 +43,6 @@ public class ProductControllerTests
         var result = mockController.AddProduct(addProduct);
 
         // Assert
-        //var okResult = Assert.IsType<OkResult>(result);
         Assert.NotNull(result); // Ensure the result is not null
     }
 }
