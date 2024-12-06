@@ -7,7 +7,5 @@ namespace WebShop.UnitOfWork
         // Repository för produkter
         // Sparar förändringar (om du använder en databas)
         void NotifyProductAdded(Product product); // Notifierar observatörer om ny produkt
-        void NotifyCustomerAdded(Customer customer);
-        void NotifyOrderAdded(Order order);
     }
 }
