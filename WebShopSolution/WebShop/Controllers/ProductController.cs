@@ -22,8 +22,6 @@ namespace WebShop.Controllers
             try
             {
                 // Fetch products using the repository pattern via Unit of Work
-                
-                // Return the list of products
                 return Ok();
             }
             catch (Exception ex)
