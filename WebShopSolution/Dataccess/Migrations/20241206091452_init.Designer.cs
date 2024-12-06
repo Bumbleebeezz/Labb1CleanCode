@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dataccess.Migrations
 {
     [DbContext(typeof(WebShopDbContext))]
-    [Migration("20241206090345_init")]
+    [Migration("20241206091452_init")]
     partial class init
     {
         /// <inheritdoc />
