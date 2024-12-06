@@ -28,7 +28,7 @@ namespace WebShopTests.UnitOfWork
 
             // Assert
             // Verifierar att Update-metoden kallades på vår mock-observatör
-            mockObserver.Verify(o => o.Update(product), Times.Once);
+            mockObserver.Verify(o => o.Add(product), Times.Once);
         }
     }
 }

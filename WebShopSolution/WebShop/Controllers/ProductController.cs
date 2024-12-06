@@ -25,7 +25,7 @@ namespace WebShop.Controllers
             {
                 return NoContent(); // Return 204 if no products found
             }
-            return Ok();
+            return Ok(products);
         }
 
         // Endpoint för att lägga till en ny produkt
@@ -42,31 +42,6 @@ namespace WebShop.Controllers
 
             // Notifierar observatörer om att en ny produkt har lagts till
             return Ok("Product added successfully."); // Return 200 with a message
-        }
-
-        // Endpoint för att updatera en produkt
-        [HttpPut]
-        [Route("id")]
-
-        public ActionResult UpdateProduct(int id)
-        {
-            if (id == null)
-            {
-                return BadRequest("Product cannot be null."); // Return 400 if input is null
-            }
-            // Notifierar observatörer om att produkten är uppdaterad
-            return Ok("Product updated."); // Return 200 with a message
-        }
-
-        // Endpoint för att ta bort en produkt
-        [HttpDelete]
-        public ActionResult RemoveProduct(int id)
-        {
-            if (id == null)
-            {
-                return BadRequest("Product id cannot be null."); // Return 400 if input is null
-            }
-            return Ok("Product removed successfully."); // Return 200 with a message
         }
     }
 }
