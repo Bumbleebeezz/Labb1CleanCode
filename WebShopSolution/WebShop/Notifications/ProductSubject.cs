@@ -25,7 +25,7 @@ namespace WebShop.Notifications
             // Notifiera alla observatörer om en ny produkt
             foreach (var observer in _observers)
             {
-                observer.Add(product);
+                observer.Update(product);
             }
         }
 
