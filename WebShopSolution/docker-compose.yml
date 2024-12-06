@@ -22,7 +22,7 @@ services:
     depends_on:
       - sqlserver
     environment:
-      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=WebShopDb;User Id=sa;Password=SuperSafePass.123;TrustServerCertificate=True;"
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=FeedbackDb;User Id=sa;Password=SuperSafePass.123;TrustServerCertificate=True;"
 
 volumes:
   sqlserver_data:
