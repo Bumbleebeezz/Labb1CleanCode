@@ -5,6 +5,7 @@ namespace Dataccess.DatabaseContext
 {
     public class WebShopDbContext : DbContext
     {
+        public WebShopDbContext() { }
         public WebShopDbContext(DbContextOptions<WebShopDbContext> options) : base(options)
         {
         }

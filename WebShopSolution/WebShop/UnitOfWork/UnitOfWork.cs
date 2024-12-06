@@ -16,11 +16,6 @@ namespace WebShop.UnitOfWork
         {
             _productSubject = productSubject ?? throw new ArgumentNullException(nameof(productSubject));
 
-            // Initiera 
-            //Products = Products ?? new List<Product>();
-            //Customers = Customers ?? new List<Customer>();
-            //Orders = Orders ?? new List<Order>();
-
             // Om inget ProductSubject injiceras, skapa ett nytt
             _productSubject = productSubject ?? new ProductSubject();
 
