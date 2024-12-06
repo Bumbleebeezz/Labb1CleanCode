@@ -1,7 +1,6 @@
 ﻿using Dataccess.Entities;
 using Dataccess.Repositories.Orders;
 using Microsoft.AspNetCore.Mvc;
-using Moq;
 using WebShop.UnitOfWork;
 
 namespace WebShop.Controllers
@@ -39,9 +38,6 @@ namespace WebShop.Controllers
             {
                 return BadRequest("Order cannot be null."); // Return 400 if input is null
             }
-            // Lägger till order via repository
-            var mockRepo = new Mock<IOrderRepository>();
-            var mockUnitOfWork = new Mock<IUnitOfWork>();
 
             var newOrder = new Order { Id = 1, CustomerId = 1, Products = {5} };
 

@@ -23,7 +23,7 @@ builder.Services.AddSwaggerGen();
 
 // Add DbContext with SQL Server or any other provider
 builder.Services.AddDbContext<WebShopDbContext>(options =>
-   options.UseSqlServer(builder.Configuration.GetConnectionString("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=WebShopDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False")));
+   options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
