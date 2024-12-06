@@ -7,10 +7,7 @@ namespace Dataccess.Repositories.Products
     public class ProductRepository : Repository<Product>, IProductRepository
     {
         public ProductRepository(WebShopDbContext context, DbSet<Product> dbSet) : base(context, dbSet) { }
-        public bool UpdateProductStock(Product product, int quantity)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public void AddProduct(Product product)
         {

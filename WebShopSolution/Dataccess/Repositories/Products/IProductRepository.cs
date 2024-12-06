@@ -7,6 +7,5 @@ namespace Dataccess.Repositories.Products
     {
         IEnumerable<Product> GetAll(); // Hämtar alla produkter
         void Add(Product product); // Lägger till en ny produkt
-        bool UpdateProductStock(Product product, int quantity);
     }
 }
