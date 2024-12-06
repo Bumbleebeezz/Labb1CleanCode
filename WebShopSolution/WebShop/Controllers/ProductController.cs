@@ -20,12 +20,8 @@ namespace WebShop.Controllers
         public ActionResult<IEnumerable<Product>> GetProducts()
         {
             // Fetch products using repository pattern via Unit of Work
-            var products = _unitOfWork.GetAll();
-            if (products is null)
-            {
-                return NoContent(); // Return 204 if no products found
-            }
-            return Ok(products);
+            
+            return Ok();
         }
 
         // Endpoint för att lägga till en ny produkt

@@ -27,10 +27,5 @@ namespace WebShop.UnitOfWork
         {
             _productSubject.Notify(product);
         }
-
-        public object GetAll()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

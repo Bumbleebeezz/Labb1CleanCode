@@ -8,13 +8,5 @@ namespace Dataccess.Repositories.Products
     {
         public ProductRepository(WebShopDbContext context, DbSet<Product> dbSet) : base(context, dbSet) { }
        
-
-        public void AddProduct(Product product)
-        {
-            if (product == null)
-                throw new ArgumentNullException(nameof(product));
-
-            Add(product);
-        }
     }
 }
