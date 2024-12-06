@@ -19,9 +19,21 @@ namespace WebShop.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> GetProducts()
         {
-            // Fetch products using repository pattern via Unit of Work
-            
-            return Ok();
+            try
+            {
+                // Fetch products using the repository pattern via Unit of Work
+                
+                // Return the list of products
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (optional)
+                Console.WriteLine($"Error fetching products: {ex.Message}");
+
+                // Return a generic error response
+                return StatusCode(500, "An error occurred while fetching products.");
+            }
         }
 
         // Endpoint för att lägga till en ny produkt
